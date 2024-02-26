@@ -1,0 +1,54 @@
+#sectionBlackOne{
+    width: 100%;
+    background-color: #000707bf;
+    padding: 40px 0;
+}
+.blackFirst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+.verticalLine{
+    width: 2px;
+    height: 100px;
+    background-color: #c4c4c4ae;
+}
+.blackContentBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+.blackContentBox h1{
+    color: white;
+}
+.blackContentBox p{
+    color: whitesmoke;
+    font-weight: 200;
+    font-size: 12px;
+}
+.blackContentBoxIcon{
+    font-size: 40px;
+    color: coral;
+}
+
+/* ===========block row two section============ */
+#blackRowTwo{
+    width: 100%;
+    padding: 50px 0;
+    background: #0f0400;
+    text-align: center;
+    
+}
+#blackRowTwo h2{
+    color: white;
+    margin-bottom: 30px;
+}
+#blackRowTwo button{
+    color: coral;
+    padding: 8px 40px;
+    border: 1px solid coral;
+    outline: none;
+    background: transparent;
+}

@@ -1,0 +1,43 @@
+
+
+#service{
+    padding: 80px 0;
+}
+#service h2{
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+#service h2 span{
+    color: coral;
+}
+.ServiceCardParent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 28.5px;
+}
+.ServiceCardWarpper{
+    width: 365px;
+    padding:35px 20px;
+    border: 1px solid #bbbbbb8a;
+    border-radius: 5px;
+    position: relative;
+}
+.ServiceCardIcon{
+    font-size: 30px;
+    position: absolute;
+    top: -20px;
+    border: 1.4px solid #bbbbbb8a;
+    background-color: white;
+    padding: 5px;
+    padding-bottom: 0;
+    border-radius: 5px;
+    color: chocolate;
+}
+.ServiceCardDetail p{
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 10px;
+}

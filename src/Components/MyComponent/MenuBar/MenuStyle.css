@@ -1,0 +1,68 @@
+#menu{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    box-shadow: 0 0 3px 0 gray;
+}
+.menuWarpper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menuWarpper ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+.menuWarpper ul li{
+    padding: 8px 10px;
+}
+.menuWarpper ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    color: black;
+    font-weight: 500;
+    position: relative;
+}
+.menuWarpper ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translate(-50%);
+    background-color: rgb(255, 138, 96);
+    transition: .2s all linear;
+}
+.menuWarpper ul li a:hover::after{
+    width: 100%;
+}
+.menuWarpper ul li a:hover{
+    color: chocolate;
+}
+.menuMidle {
+    color: black;
+    text-align: center;
+}
+.menuMidle h3{
+    color: black;
+    text-transform: uppercase;
+}
+.menuMidle h5{
+    color: black;
+    font-variant: small-caps;
+    margin-top: 8px;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+}

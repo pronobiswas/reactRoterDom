@@ -1,0 +1,74 @@
+
+
+#PackPriceing{
+    padding: 60px 0;
+}
+#PackPriceing>h2{
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+#PackPriceing>h2 span{color: coral;}
+.pricecardwarpper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.priceCard{
+    border: 1px solid #bbbbbbc5;
+    width: 250px;
+    padding: 25px 0;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+.badge{
+    position: absolute;
+    top: 8px;
+    right: -22px;
+    width: 90px;
+    background-color: #ff7b1c;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    transform: rotate(45deg);
+
+}
+.priceCard h2{
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.tk{
+    font-size: 46px;
+    font-weight: 600;
+    position: relative;
+}
+.tk::before{
+    content: "$";
+    font-size: 16px;
+    color: #646464;
+    position: absolute;
+    left: -8px;
+    top: 3px;
+}
+.price sub{
+    font-size: 9px;
+}
+.priceCard ul{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.priceCard ul li{
+    font-size: 13px;
+    font-weight: 300;
+}
+.priceCard button{
+    padding: 5px 25px;
+    border: 1px solid coral;
+    color: chocolate;
+    background-color: transparent;
+}

@@ -1,0 +1,10 @@
+
+footer{
+    background-color: black;
+    color: chocolate;
+    text-align: center;
+    padding: 20px 0;
+    border: 5px solid transparent;
+    border-image: linear-gradient(45deg,#0000ff77, #ff000080,#00800078,yellow,#b7000081,#0100386d);
+    border-image-slice: 3;
+}

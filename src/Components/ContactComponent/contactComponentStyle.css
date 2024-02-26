@@ -1,0 +1,54 @@
+
+
+#contactSection{
+    width: 100%;
+    margin: 50px 0;
+    padding: 50px 0;
+    background: #0000000f;
+}
+.contactWarpper{
+    display: flex;
+    justify-content: space-between;
+}
+.contactWarpper h2{
+    margin-bottom: 35px;
+}
+form{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+input,textarea{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #bbbbbbc4;
+    border-radius: 5px;
+    outline: 2px solid transparent;
+}
+input:focus{
+    outline: 2px solid #feaf92;
+    border-radius: 5px;
+}
+textarea:focus{
+    outline: 2px solid #feaf92;
+    border-radius: 5px;
+}
+input[type=submit]{
+    background-color: coral;
+    color: white;
+}
+.address ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+}
+.address ul li{
+display: flex;
+column-gap: 15px;
+}
+.address ul li p{
+    font-size: 14px;
+    line-height: 1.9;
+}
