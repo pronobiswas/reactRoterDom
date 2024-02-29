@@ -1,6 +1,7 @@
 import React from 'react'
 import './headerStyle.css'
 import '../../App.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -13,7 +14,7 @@ const Header = () => {
               <h1 id='logoTime'>LOGO</h1>
             </div>
             <ul>
-              <li><Link to="/home">Home</Link></li>
+              <li><Link to="/">Home</Link></li>
 
               <li><Link to="/about">About</Link></li>
 
