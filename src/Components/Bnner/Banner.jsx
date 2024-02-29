@@ -17,49 +17,49 @@ const Banner = () => {
 
 
 
-  let typeText = document.querySelector("#typeingEffectText");
-    let textToBeTyped = "HTML5 | CSS3 | JAVASCRIPT";
-    let textToBeTypedArr = ["HTML5 | CSS3", "BOOTSTRAP5 | W3CSS | TAILWIND", "JAVASCRIPT | JQUERY", "REACT | NODE"];
-    let index = 0, isAdding = true, textToBeTypedIndex = 0;
+  // let typeText = document.querySelector("#typeingEffectText");
+  //   let textToBeTyped = "HTML5 | CSS3 | JAVASCRIPT";
+  //   let textToBeTypedArr = ["HTML5 | CSS3", "BOOTSTRAP5 | W3CSS | TAILWIND", "JAVASCRIPT | JQUERY", "REACT | NODE"];
+  //   let index = 0, isAdding = true, textToBeTypedIndex = 0;
     
-    function playAnim() {
-      setTimeout(function () {
+  //   function playAnim() {
+  //     setTimeout(function () {
     
-        typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index);
-        if (isAdding) {
+  //       typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index);
+  //       if (isAdding) {
           
-          if (index > textToBeTypedArr[textToBeTypedIndex].length) {
+  //         if (index > textToBeTypedArr[textToBeTypedIndex].length) {
            
-            isAdding = false
-            typeText.classList.add("showAnim")
+  //           isAdding = false
+  //           typeText.classList.add("showAnim")
             
-            setTimeout(function () {
-              typeText.classList.remove("showAnim")
-              playAnim()
-            }, 1000)
-            return
-          } else {
+  //           setTimeout(function () {
+  //             typeText.classList.remove("showAnim")
+  //             playAnim()
+  //           }, 1000)
+  //           return
+  //         } else {
             
-            index++;
-          }
-        } else {
+  //           index++;
+  //         }
+  //       } else {
           
-          if (index === 0) {
+  //         if (index === 0) {
             
-            isAdding = true
+  //           isAdding = true
             
-            textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
-          } else {
+  //           textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
+  //         } else {
            
-            index--
-          }
-        }
+  //           index--
+  //         }
+  //       }
         
-        playAnim()
-      },isAdding ? 120 : 60);
-    }
+  //       playAnim()
+  //     },isAdding ? 120 : 60);
+  //   }
     // start animation
-    playAnim();
+    // playAnim();
     // window.addEventListener("load", playAnim());
     
 
