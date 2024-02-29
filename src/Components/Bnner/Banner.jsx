@@ -55,7 +55,7 @@ const Banner = () => {
           }
         }
         
-        // playAnim()
+        playAnim()
       },isAdding ? 120 : 60);
     }
     // start animation

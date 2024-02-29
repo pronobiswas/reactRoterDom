@@ -1,5 +1,6 @@
 import React from 'react'
 import './MenuStyle.css'
+import { Link } from 'react-router-dom'
 const Menu = () => {
     
 
@@ -10,13 +11,13 @@ const Menu = () => {
             <div className="menuLeft">
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                    <Link to="/home">Home</Link>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <a href="/resume">Resume</a>
+                    <Link to="/resume">Resume</Link>
                     </li>
                 </ul>
             </div>
@@ -27,14 +28,17 @@ const Menu = () => {
             <div className="menuRight">
                 <ul>
                     <li>
-                        <a href="/portfolio">Portfolio</a>
+                        <Link to="/portfolio">Portfolio</Link>
                     </li>
                     <li>
-                        <a href="/blog">Blog</a>
+                        <Link to="/blog">Blog</Link>
                     </li>
+                    
+
                     <li>
-                        <a href="/contact">Contact</a>
+                        <Link to="/contact">Contact</Link>
                     </li>
+
                 </ul>
             </div>
         </div>
