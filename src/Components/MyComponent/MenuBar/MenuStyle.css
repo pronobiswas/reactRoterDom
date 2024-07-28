@@ -51,6 +51,18 @@
 .menuMidle {
     color: black;
     text-align: center;
+    position: relative;
+}
+.menuImagePic{
+    width: 130px;
+    height: 130px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 8px solid #fff;
 }
 .menuMidle h3{
     color: black;

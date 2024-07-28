@@ -10,64 +10,13 @@ import { FaGithubSquare } from "react-icons/fa";
 
 import Menu from '../MyComponent/MenuBar/Menu';
 import AboutComponent from '../AboutComponent/AboutComponent';
+import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-router-dom';
 
-const Banner = () => {
+const Banner = (scrollPosition) => {
 
-
-
-
-
-  // let typeText = document.querySelector("#typeingEffectText");
-  //   let textToBeTyped = "HTML5 | CSS3 | JAVASCRIPT";
-  //   let textToBeTypedArr = ["HTML5 | CSS3", "BOOTSTRAP5 | W3CSS | TAILWIND", "JAVASCRIPT | JQUERY", "REACT | NODE"];
-  //   let index = 0, isAdding = true, textToBeTypedIndex = 0;
-    
-  //   function playAnim() {
-  //     setTimeout(function () {
-    
-  //       typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index);
-  //       if (isAdding) {
-          
-  //         if (index > textToBeTypedArr[textToBeTypedIndex].length) {
-           
-  //           isAdding = false
-  //           typeText.classList.add("showAnim")
-            
-  //           setTimeout(function () {
-  //             typeText.classList.remove("showAnim")
-  //             playAnim()
-  //           }, 1000)
-  //           return
-  //         } else {
-            
-  //           index++;
-  //         }
-  //       } else {
-          
-  //         if (index === 0) {
-            
-  //           isAdding = true
-            
-  //           textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
-  //         } else {
-           
-  //           index--
-  //         }
-  //       }
-        
-  //       playAnim()
-  //     },isAdding ? 120 : 60);
-  //   }
-    // start animation
-    // playAnim();
-    // window.addEventListener("load", playAnim());
-    
-
-
-
-
-
-
+  const myMesure = parseInt(scrollPosition)
+  console.log(scrollPosition);
   return (
     <>
         <div id='banner'>
@@ -90,7 +39,13 @@ const Banner = () => {
                           <p className="fassion">Front end Designer | Developer </p>
                           
                           
-                          <span className="textAbove typedtext">I AM WORK WITH </span>
+                          <span className="textAbove typedtext">I AM WORK WITH 
+                            <TypeAnimation
+                              sequence={['HTML5 , CSS3 ,SCSS, JavaScript', 1500, 'BootStrap Tailwind MUI', 1500, 'ReactJS NodeJS FireBase' , 1500]}
+                              style={{  }}
+                              repeat={Infinity}
+                            />
+                          </span>
                           <span className="typText typeingtext" id='typeingEffectText'></span>
                           <br/>
                           
@@ -102,7 +57,54 @@ const Banner = () => {
               </div>
           </div>
         </div>
-        <Menu/>
+
+        <div id="menu">
+        <div className="menuWarpper">
+            <div className="menuLeft">
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                    <Link to="/resume">Resume</Link>
+                    </li>
+                </ul>
+            </div>
+            <div className="menuMidle">
+                <div>
+                  <h3>pronob biswas</h3>
+                  <h5>Front-End developer</h5>
+                </div>
+
+                <div className='menuImagePic'>
+                  <div className="imgww">
+                    <img src="" alt="png" />
+                  </div>
+                </div>
+            </div>
+            <div className="menuRight">
+                <ul>
+                    <li>
+                        <Link to="/portfolio">Portfolio</Link>
+                    </li>
+                    <li>
+                        <Link to="/blog">Blog</Link>
+                    </li>
+                    
+
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        </div>
+
+        {/* <Menu/> */}
         <AboutComponent/>
     </>
   )

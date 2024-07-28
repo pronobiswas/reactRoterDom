@@ -3,6 +3,8 @@
     height: 600px;
     background:  url(./images/header.jpg);
     background-position: left center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     
 }
@@ -44,15 +46,19 @@
     font-size: 2vw;
     letter-spacing: 5px;
     line-height: .8;
-    color: #ffffff;
-    -webkit-text-stroke: 1px gray;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(110, 187, 255);
 }
 .typedtext{
     font-size: 2vw;
     letter-spacing: 5px;
     line-height: 100%;
     color: whitesmoke;
-    -webkit-text-stroke: 1px gray;
+    /* -webkit-text-stroke: 1px gray; */
+    background: #121FCF;
+    background: linear-gradient(to right, #00e5ff 0%, #fc42ff 30%,#fff242 70% , #1dd601 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .typeingtext{
     font-size: 2vw;
