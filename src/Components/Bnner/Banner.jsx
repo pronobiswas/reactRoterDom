@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './bannerstyle.css';
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io5";
@@ -6,6 +6,7 @@ import { FaGooglePlus } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
+import myImage from './images/mypic.jpg'
 
 
 import Menu from '../MyComponent/MenuBar/Menu';
@@ -13,10 +14,18 @@ import AboutComponent from '../AboutComponent/AboutComponent';
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
 
-const Banner = (scrollPosition) => {
+const Banner = () => {
 
-  const myMesure = parseInt(scrollPosition)
-  console.log(scrollPosition);
+    const [dispAvatar , setDispAvatar] = useState(false)
+
+    window.addEventListener("scroll" , (e)=>{
+        if(e.currentTarget.scrollY > 600){
+            setDispAvatar(false)
+        }else{
+            setDispAvatar(true)
+        }
+    })
+    
   return (
     <>
         <div id='banner'>
@@ -74,16 +83,22 @@ const Banner = (scrollPosition) => {
                 </ul>
             </div>
             <div className="menuMidle">
-                <div>
-                  <h3>pronob biswas</h3>
-                  <h5>Front-End developer</h5>
-                </div>
+                
 
-                <div className='menuImagePic'>
-                  <div className="imgww">
-                    <img src="" alt="png" />
-                  </div>
-                </div>
+                {
+                    dispAvatar?
+                        <div className='menuImagePic'>
+                        <div className="imgww">
+                            <img src={myImage} alt="png" />
+                        </div>
+                        </div>
+                        :
+                        <div>
+                        <h3>pronob biswas</h3>
+                        <h5>Front-End developer</h5>
+                        </div>
+                }
+
             </div>
             <div className="menuRight">
                 <ul>

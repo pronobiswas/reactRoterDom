@@ -12,20 +12,18 @@ import Myscroll from './Myscroll'
 
 const Home = () => {
 
-  const [scrollPosition, setScrollPosition] = useState("");
-  const [backgroundColor, setBackgroundColor] = useState("white");
+  const [scrollTop, setScrollTop] = useState(0);
+
  
     const handleScroll = (event) => {
+
         const { scrollTop, scrollHeight, clientHeight } = event.target;
         const scrollRatio = scrollTop / (scrollHeight - clientHeight);
+
+        setScrollTop(event.currentTarget.scrollTop);
  
-        setScrollPosition(toString(scrollRatio))
+        console.log(scrollTop);
         
-        // if (scrollRatio > 0.12) {
-        //     setBackgroundColor("lightblue");
-        // } else {
-        //     setBackgroundColor("white");
-        // }
     };
 
   return (
@@ -33,18 +31,15 @@ const Home = () => {
     <div
       className="scrollable-element"
       style={{
-          height: "1600px",
-          overflowY: "scroll",
+          // height: "1600px",
+          // overflowY: "scroll",
           scrollbarWidth:"none"
 
       }}
-      onScroll={handleScroll}
+      // onScroll={handleScroll}
     >
-      <h1 style={{ position: "fixed", color: "red" }}>
-                Scroll Position: {scrollPosition}px
-            </h1>
-        {/* <Myscroll/> */}
-        <Banner  scrollPosition/>
+      
+        <Banner  scrollTop/>
         <Resume/>
         <BlackRowOne/>
         <MyservicesComponent/>

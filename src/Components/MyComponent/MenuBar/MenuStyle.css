@@ -59,10 +59,19 @@
     background: #000;
     border-radius: 50%;
     position: absolute;
-    top: -40px;
+    top: -60px;
     left: 50%;
     transform: translate(-50%);
     border: 8px solid #fff;
+}
+.imgww{
+    width: 100%;
+    height: 100%; 
+}
+.imgww img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 .menuMidle h3{
     color: black;
